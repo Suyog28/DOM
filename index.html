@@ -9,6 +9,10 @@
   <body>
     <p>Please rate the service:</p>
     <p>
+      <label for="Full Name">
+        Name:
+        <input type="text" name="name" value="" id="name" />
+      </label>
       <label for="very-poor">
         <input type="radio" name="rate" value="Very Poor" id="very-poor" /> Very
         Poor
@@ -31,11 +35,13 @@
     <p id="output">Output:</p>
 
     <script>
-      //const element = document.getElementById("name");
+      const element = document.getElementById("name");
       const btnSubmit = document.getElementById("btn");
       console.log(btnSubmit);
       const btnOutput = document.getElementById("output");
-      console.log(btnOutput);git push -u origin
+      console.log(btnOutput);
+      const inText = document.getElementById("name").value;
+      document.getElementById("output").innerHTML = inText;
 
       btnSubmit.addEventListener("click", () => {
         let rates = document.getElementsByName("rate");
